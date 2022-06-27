@@ -6,7 +6,7 @@ ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 ascii_letters_length = len(ascii_letters)
 
 def main():
-    init_function_definition='mintWL(uint256,uint256[])'
+    init_function_definition=sys.argv[1]
     init_selector = get_hash(init_function_definition)[:4].hex()
 
     function_definition_parts=init_function_definition.split('(')
